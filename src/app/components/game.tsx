@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Status from './status';
 import Board from './board';
 
-const Cat: React.FC = () => {
+const Game: React.FC = () => {
     const [squares, setSquares] = useState<Array<string | null>>(Array(9).fill(null));
     const [isXNext, setIsXNext] = useState<boolean>(true);
     const [gameStarted, setGameStarted] = useState<boolean>(false);
@@ -100,4 +100,4 @@ const calculateWinner = (squares: Array<string | null>): string | null => {
     return null;
 };
 
-export default Cat;
+export default Game;
