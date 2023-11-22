@@ -1,4 +1,5 @@
 'use client'
+
 import React, { useState, useEffect } from 'react';
 import Status from './status';
 import Board from './board';
@@ -34,6 +35,8 @@ const Game: React.FC = () => {
         const winner = calculateWinner(newSquares);
         if (winner) {
             setWinner(winner);
+        } else if (isGameDraw(newSquares)) {
+            setWinner('Draw');
         } else {
             setIsXNext(!isXNext);
         }
@@ -98,6 +101,11 @@ const calculateWinner = (squares: Array<string | null>): string | null => {
     }
 
     return null;
+};
+
+
+const isGameDraw = (squares: Array<string | null>): boolean => {
+    return squares.every((square) => square !== null);
 };
 
 export default Game;
