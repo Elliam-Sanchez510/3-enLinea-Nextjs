@@ -1,5 +1,4 @@
 'use client'
-
 import React, { useState, useEffect } from 'react';
 import Status from './status';
 import Board from './board';
@@ -60,6 +59,7 @@ const Game: React.FC = () => {
 
     return (
         <div className="text-center my-8">
+            <h1 className="text-4xl font-bold mb-6 animate-bounce">Tic-Tac-Toe</h1>
             <Status winner={winner} isXNext={isXNext} player1={player1} player2={player2} gameStarted={gameStarted} />
             <Board squares={squares} onClick={handleClick} />
             <div className="flex justify-center space-x-4">
