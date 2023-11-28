@@ -64,7 +64,7 @@ const Game: React.FC = () => {
             <Board squares={squares} onClick={handleClick} />
             <div className="flex justify-center space-x-4">
                 <button
-                    className="btn-start bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded"
+                    className="btn-start bg-blue-500 hover:bg-blue-700 text-white py-2 rounded"
                     onClick={handleStartGame}
                     disabled={gameStarted || !!winner}
                 >
